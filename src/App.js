@@ -1,67 +1,81 @@
 import React, { Component } from 'react';
 import './App.css';
 import Course from './components/Course'
+// TODO separate imports for bootstrap
+import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab } from 'react-bootstrap'
+
 class App extends Component {
 
   state = {
-    search: '',
-    courses: [
+    completedCourses: [
       {
-        name: 'Everything else',
-        mIndex: 100,
+        name: 'o1',
+        code: 'CS-1001',
+        completed: true
       },
       {
-        name: 'Sci-project',
-        mIndex: 0,
+        name: 'o2',
+        code: 'CS-1002',
+        completed: false,
+      }
+    ],
+    recommendedCourses: [
+      {
+        name: 'o1',
+        code: 'CS-1001',
+      },
+      {
+        name: 'o2',
+        code: 'CS-1002',
       }
     ],
   }
 
-  search = () => {
+  handleClick = (e) => {
+    const clickedCourse = e.target.name
     this.setState(prevState => {
-      const courses = prevState.courses.filter(c => {
-        return c.name.toLowerCase().includes(prevState.search.toLowerCase())
+      const completedCourses = prevState.completedCourses.map(course => {
+        if (course.code === clickedCourse) {
+          course.completed = !course.completed
+        }
+        return course
       })
-      return { courses }
+      return { completedCourses }
     })
   }
 
-  handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      this.search()
-    }
-  }
-
-  onChange = (e) => {
-    this.setState({[e.target.name]: e.target.value})
-  }
-
   render() {
-    const { courses, search } = this.state
+    const { completedCourses, recommendedCourses } = this.state
     return (
       <div className="App">
-        <div className='topbar'>
-          <input
-            type='search'
-            value={search}
-            name='search'
-            onChange={this.onChange}
-            onKeyPress={this.handleKeyPress}
-          ></input>
-          <button
-            type='button'
-          >
-          Login
-          </button>
-          </div>
-        {courses.map(c => (
-          <Course
-            key={c.name}
-            name={c.name}
-            mIndex={c.mIndex}  
-          />
-        ))}
-      </div>
+        <Tabs>
+          <Tab eventKey="completed" title="Completed">
+            <div>
+              {completedCourses.map(c => (
+                <Course
+                  key={c.code}
+                  name={c.name}
+                  code={c.code}
+                  completed={c.completed}
+                  handleClick={this.handleClick}
+                />
+              ))}
+            </div>
+          </Tab>
+          <Tab eventKey="recommendations" title="Recommendations">
+            <div className='mt-1'>
+              {recommendedCourses.map(c => (
+                <Course
+                  key={c.code}
+                  name={c.name}
+                  code={c.code}
+                  mIndex={c.mIndex}  
+                />
+              ))}
+            </div>
+          </Tab>
+        </Tabs>
+     </div>
     );
   }
 }

@@ -1,11 +1,27 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+import FormCheck from 'react-bootstrap/FormCheck'
 
 export default function Course(props) {
-  const { name, mIndex } = props
+  const { name, code, completed, handleClick } = props
+  const cssClasses = `p-2 m-1 course ${completed ? 'completed' : ''}`
   return (
-    <div className='course'>
-      <span className='name'>{name}</span>
-      <span className='mIndex'>{mIndex}</span>
-    </div>
+    <Card className={cssClasses}>
+      <div>
+        <span>
+          <Card.Title>
+            {name}
+          </Card.Title>
+          <Card.Subtitle>{code}</Card.Subtitle>
+        </span>
+        <span>
+          <FormCheck
+            name={code}
+            checked={completed}
+            onClick={handleClick}
+          />
+        </span>
+      </div>
+    </Card>
   )
 }
