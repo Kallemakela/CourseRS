@@ -59,6 +59,9 @@ class App extends Component {
       return { completedCourses }
     })
   }
+  componentDidMount(){
+      this.setState( {recommendedCourses: courseRank(this.state.completedCourses),})
+  }
 
   render() {
     const { completedCourses, recommendedCourses } = this.state

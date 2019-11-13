@@ -22,7 +22,7 @@ export default function recommend(courseList){
           filtered.push({name: courseNames[i], code:courseList[i].code, mIndex:rankedCourses[i]})
         }
       }
-      return filtered
+      return filtered.sort(function(a, b){return b.mIndex-a.mIndex})
     }
     const a = courseRank(completedCourses, W)
     console.log(a)
