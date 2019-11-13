@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Course from './components/Course'
+import courseType from './components/Course'
+import courseRank from'./courseRank'
 // TODO separate imports for bootstrap
 import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab } from 'react-bootstrap'
 
@@ -11,26 +12,40 @@ class App extends Component {
       {
         name: 'o1',
         code: 'CS-1001',
-        completed: true
+        completed: false
       },
       {
         name: 'o2',
         code: 'CS-1002',
         completed: false,
-      }
+      },
+      {
+        name: 'trak',
+        code: 'asdf',
+        completed:false
+      },
+      {
+        name: 'sci',
+        code: 'joku',
+        completed:false
+      },
+      
     ],
     recommendedCourses: [
-      {
+      /*{
         name: 'o1',
         code: 'CS-1001',
+        mIndex: 1
       },
       {
         name: 'o2',
         code: 'CS-1002',
-      }
+        mIndex: 2
+
+      }*/
     ],
   }
-
+  
   handleClick = (e) => {
     const clickedCourse = e.target.name
     this.setState(prevState => {
@@ -40,6 +55,7 @@ class App extends Component {
         }
         return course
       })
+      this.setState( {recommendedCourses: courseRank(this.state.completedCourses),})
       return { completedCourses }
     })
   }
@@ -52,8 +68,7 @@ class App extends Component {
           <Tab eventKey="completed" title="Completed">
             <div>
               {completedCourses.map(c => (
-                <Course
-                  key={c.code}
+                <courseType.Course
                   name={c.name}
                   code={c.code}
                   completed={c.completed}
@@ -65,8 +80,7 @@ class App extends Component {
           <Tab eventKey="recommendations" title="Recommendations">
             <div className='mt-1'>
               {recommendedCourses.map(c => (
-                <Course
-                  key={c.code}
+                <courseType.CourseRes
                   name={c.name}
                   code={c.code}
                   mIndex={c.mIndex}  
@@ -76,6 +90,7 @@ class App extends Component {
           </Tab>
         </Tabs>
      </div>
+
     );
   }
 }
