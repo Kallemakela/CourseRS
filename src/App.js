@@ -47,7 +47,7 @@ class App extends Component {
   }
   
   handleClick = (e) => {
-    const clickedCourse = e.target.name
+    const clickedCourse = e.target.id
     this.setState(prevState => {
       const completedCourses = prevState.completedCourses.map(course => {
         if (course.code === clickedCourse) {
@@ -67,7 +67,7 @@ class App extends Component {
     const { completedCourses, recommendedCourses } = this.state
     return (
       <div className="App">
-        <Tabs defaultActiveKey='recommendations'>
+        <Tabs defaultActiveKey='completed'>
           <Tab eventKey="completed" title="Completed">
             <div>
               {completedCourses.map(c => (

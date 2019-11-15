@@ -7,20 +7,16 @@ function Course(props) {
   const cssClasses = `p-2 m-1 course ${completed ? 'completed' : ''}`
   return (
     <Card className={cssClasses}>
-      <div>
-        <span>
-          <Card.Title>
-            {name}
-          </Card.Title>
+      <div class='d-flex' onClick={handleClick} id={code}>
+        <div class="p-2">
+          <Card.Title>{name}</Card.Title>
           <Card.Subtitle>{code}</Card.Subtitle>
-        </span>
-        <span>
+        </div>
+        <div class="ml-auto p-2">
           <FormCheck
-            name={code}
             checked={completed}
-            onClick={handleClick}
           />
-        </span>
+        </div>
       </div>
     </Card>
   )
