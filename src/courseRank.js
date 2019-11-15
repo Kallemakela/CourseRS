@@ -1,6 +1,5 @@
 const math = require('mathjs')
 
-
 export default function recommend(courseList){
     const W = [[0, 1, 0.5, 0],
            [0, 0, 1, 0], 
@@ -18,13 +17,11 @@ export default function recommend(courseList){
       const rankedCourses = math.multiply(courses, W)
       const filtered = []
       for (let i = 0; i < courses.length; i++) {
-        if (courses[i] === false) {
+        if (!courses[i]) {
           filtered.push({name: courseNames[i], code:courseList[i].code, mIndex:rankedCourses[i]})
         }
       }
       return filtered.sort(function(a, b){return b.mIndex-a.mIndex})
     }
-    const a = courseRank(completedCourses, W)
-    console.log(a)
-    return a
+    return courseRank(completedCourses, W)
 }
