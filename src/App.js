@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import courseType from './components/Course'
+import Course from './components/Course'
+import CourseRec from './components/CourseRec'
 import courseRank from'./courseRank'
 // TODO separate imports for bootstrap
-import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab } from 'react-bootstrap'
+import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab, Accordion } from 'react-bootstrap'
 
 class App extends Component {
 
@@ -66,11 +67,11 @@ class App extends Component {
     const { completedCourses, recommendedCourses } = this.state
     return (
       <div className="App">
-        <Tabs>
+        <Tabs defaultActiveKey='recommendations'>
           <Tab eventKey="completed" title="Completed">
             <div>
               {completedCourses.map(c => (
-                <courseType.Course
+                <Course
                   name={c.name}
                   code={c.code}
                   completed={c.completed}
@@ -81,14 +82,17 @@ class App extends Component {
           </Tab>
           <Tab eventKey="recommendations" title="Recommendations">
             <div className='mt-1'>
-              {recommendedCourses.map(c => (
-                <courseType.CourseRes
-                  name={c.name}
-                  code={c.code}
-                  mIndex={c.mIndex}  
-                />
-              ))}
-            </div>
+              <Accordion>
+                {recommendedCourses.map((c, i) => (
+                  <CourseRec
+                    index={i}
+                    name={c.name}
+                    code={c.code}
+                    mIndex={c.mIndex}  
+                  />
+                ))}
+              </Accordion>
+           </div>
           </Tab>
         </Tabs>
      </div>
