@@ -1,0 +1,20 @@
+CS-C3160, Data Science
+CS-E3210, Machine Learning: Basic Principles
+CS-A1110, Programming 1
+CS-C3170, Web Software Development
+CS-E4800, Artificial Intelligence
+UWAS-C0036, Game Design and Production
+DOM-E5089, Games Now!
+MS-A0309, Differential and integral calculus 3
+MS-C1343, Linear Algebra
+MS-C1420, Fourier analysis
+TU-C9270, Introduction to Networks
+TU-C9260, Studio Course of Industrial Engineering and Management
+TU-C1030, Managerial accounting and finance for decision-makers
+TU-A1150, Philosophy and Systems Thinking
+TU-A1140, Leading and Understanding Oneself
+ELEC-A4010, Electrical engineering workshop
+AAN-C2011, ADD basics
+ENG-A1005, Futures forum in Engineering
+NBE-C3001, Brain ABC
+ELEC-A4930, Astronomical View of the World 
