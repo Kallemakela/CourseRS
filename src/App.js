@@ -29,7 +29,6 @@ class App extends Component {
         code: 'joku',
         completed:false
       },
-      
     ],
     recommendedCourses: [
       /*{

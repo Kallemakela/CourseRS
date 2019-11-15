@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-n = 20
+n = 4
 maxWeight = 0.8
 W = np.random.rand(n,n) * maxWeight
 W = np.round(W, 2)
