@@ -6,15 +6,31 @@ function Course(props) {
   const { name, code, completed, handleClick } = props
   const cssClasses = `p-2 m-3 course ${completed ? 'completed' : ''}`
   return (
-    <Card className={cssClasses} onClick={handleClick}>
-      <div class='d-flex' id={code}>
-        <div class="p-2">
-          <Card.Title>{name}</Card.Title>
-          <Card.Subtitle>{code}</Card.Subtitle>
+    <Card
+      className={cssClasses}
+      onClick={handleClick}
+    >
+      <div
+        className='d-flex'
+        lang={code}
+      >
+        <div className="p-2"
+        >
+          <Card.Title
+            lang={code}
+          >
+            {name}
+          </Card.Title>
+          <Card.Subtitle
+            lang={code}
+          >
+            {code}
+          </Card.Subtitle>
         </div>
-        <div class="ml-auto p-2">
+        <div className="ml-auto p-2">
           <FormCheck
             checked={completed}
+            lang={code}
           />
         </div>
       </div>

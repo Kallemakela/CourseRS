@@ -14,7 +14,7 @@ class App extends Component {
   }
   
   handleClick = (e) => {
-    const clickedCourse = e.target.id
+    const clickedCourse = e.target.lang
     this.setState(prevState => {
       const completedCourses = prevState.completedCourses.map(course => {
         if (course.code === clickedCourse) {
