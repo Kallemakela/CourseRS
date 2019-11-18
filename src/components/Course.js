@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import FormCheck from 'react-bootstrap/FormCheck'
 
 function Course(props) {
   const { name, code, completed, handleClick } = props
@@ -10,16 +9,17 @@ function Course(props) {
       className={cssClasses}
       onClick={() => handleClick(code)}
     >
-      <div class='d-flex' id={code}>
-        <div class="p-2">
+      <div className='d-flex' id={code}>
+        <div className="p-2">
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle>{code}</Card.Subtitle>
         </div>
-        <div class="ml-auto d-flex p-2">
+        <div className="ml-auto d-flex p-2">
           <input
             type='checkbox'
             className='checkbox'
             checked={completed}
+            readOnly
           />
         </div>
       </div>

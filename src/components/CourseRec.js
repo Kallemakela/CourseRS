@@ -8,15 +8,15 @@ function CourseRec(props) {
   return (
     <Card className={cssClasses}>
       <Accordion.Toggle as={Card.Header} eventKey={`${index}`}>
-        <div class="d-flex">
-          <div class="p-2">{code}</div>
-          <div class="p-2">{name}</div>
-          <div class="ml-auto p-2">Suitability: {mIndex.toFixed(0)}%</div>
+        <div className="d-flex">
+          <div className="p-2">{code}</div>
+          <div className="p-2">{name}</div>
+          <div className="ml-auto p-2">Suitability: {mIndex.toFixed(0)}%</div>
         </div>
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={`${index}`}>
         <Card.Body>
-        <div class="d-flex">
+        <div className="d-flex">
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare quam nisl, id accumsan quam consectetur sit amet. In et felis vel augue venenatis sollicitudin. Vivamus tincidunt elit quis nibh volutpat consectetur. Etiam non suscipit erat. Nulla suscipit mauris nec faucibus sodales. Aliquam tincidunt neque a leo eleifend, sed auctor nisl condimentum. Fusce justo nibh, condimentum vitae diam in, lacinia volutpat magna. Suspendisse euismod vulputate leo eget ultricies.
           </div>

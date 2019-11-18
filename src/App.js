@@ -3,41 +3,50 @@ import './App.css';
 import Course from './components/Course'
 import CourseRec from './components/CourseRec'
 import { recommendCourses, getCourses } from'./db'
-// TODO separate imports for bootstrap
-import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab, Accordion } from 'react-bootstrap'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
+import Accordion from 'react-bootstrap/Accordion'
 
 class App extends Component {
 
   state = {
-    completedCourses: getCourses(''),
+    courses: [],
     recommendedCourses: [],
   }
   
   handleClick = (clickedCourse) => {
     this.setState(prevState => {
-      const completedCourses = prevState.completedCourses.map(course => {
+      const courses = prevState.courses.map(course => {
         if (course.code === clickedCourse) {
           course.completed = !course.completed
         }
         return course
       })
-      this.setState( {recommendedCourses: recommendCourses(this.state.completedCourses),})
-      return { completedCourses }
+      return {
+        courses,
+        recommendedCourses: recommendCourses(courses)
+      }
     })
   }
-  componentDidMount(){
-      this.setState( {recommendedCourses: recommendCourses(this.state.completedCourses),})
+
+  componentDidMount() {
+    const courses = getCourses('./data/weights.csv')
+    this.setState({
+      courses,
+      recommendedCourses: recommendCourses(courses),
+    })
   }
 
   render() {
-    const { completedCourses, recommendedCourses } = this.state
+    const { courses, recommendedCourses } = this.state
     return (
       <div className="App">
         <Tabs defaultActiveKey='completed'>
           <Tab eventKey="completed" title="Completed">
             <div>
-              {completedCourses.map(c => (
+              {courses.map(c => (
                 <Course
+                  key={c.code}
                   name={c.name}
                   code={c.code}
                   completed={c.completed}
@@ -52,6 +61,7 @@ class App extends Component {
                 {recommendedCourses.map((c, i) => (
                   <CourseRec
                     index={i}
+                    key={c.code}
                     name={c.name}
                     code={c.code}
                     mIndex={c.mIndex}  
