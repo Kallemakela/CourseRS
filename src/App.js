@@ -13,8 +13,7 @@ class App extends Component {
     recommendedCourses: [],
   }
   
-  handleClick = (e) => {
-    const clickedCourse = e.target.lang
+  handleClick = (clickedCourse) => {
     this.setState(prevState => {
       const completedCourses = prevState.completedCourses.map(course => {
         if (course.code === clickedCourse) {
