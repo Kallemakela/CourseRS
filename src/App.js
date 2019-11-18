@@ -2,48 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import Course from './components/Course'
 import CourseRec from './components/CourseRec'
-import courseRank from'./courseRank'
+import { recommendCourses, getCourses } from'./db'
 // TODO separate imports for bootstrap
 import { Button, ButtonGroup, Container, Col, Row, Tabs, Tab, Accordion } from 'react-bootstrap'
 
 class App extends Component {
 
   state = {
-    completedCourses: [
-      {
-        name: 'o1',
-        code: 'CS-1001',
-        completed: false
-      },
-      {
-        name: 'o2',
-        code: 'CS-1002',
-        completed: false,
-      },
-      {
-        name: 'trak',
-        code: 'asdf',
-        completed:false
-      },
-      {
-        name: 'sci',
-        code: 'joku',
-        completed:false
-      },
-    ],
-    recommendedCourses: [
-      /*{
-        name: 'o1',
-        code: 'CS-1001',
-        mIndex: 1
-      },
-      {
-        name: 'o2',
-        code: 'CS-1002',
-        mIndex: 2
-
-      }*/
-    ],
+    completedCourses: getCourses(''),
+    recommendedCourses: [],
   }
   
   handleClick = (e) => {
@@ -55,12 +22,12 @@ class App extends Component {
         }
         return course
       })
-      this.setState( {recommendedCourses: courseRank(this.state.completedCourses),})
+      this.setState( {recommendedCourses: recommendCourses(this.state.completedCourses),})
       return { completedCourses }
     })
   }
   componentDidMount(){
-      this.setState( {recommendedCourses: courseRank(this.state.completedCourses),})
+      this.setState( {recommendedCourses: recommendCourses(this.state.completedCourses),})
   }
 
   render() {
