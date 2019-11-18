@@ -4,7 +4,7 @@ import FormCheck from 'react-bootstrap/FormCheck'
 
 function Course(props) {
   const { name, code, completed, handleClick } = props
-  const cssClasses = `p-2 m-1 course ${completed ? 'completed' : ''}`
+  const cssClasses = `p-2 m-3 course ${completed ? 'completed' : ''}`
   return (
     <Card className={cssClasses} onClick={handleClick}>
       <div class='d-flex' id={code}>

@@ -8,5 +8,6 @@
 
 
 .course:hover {
-  background-color: #f7f7f7;
+  transform: scale(1.03);
+  transition-duration: 0.3s;
 }

@@ -3,15 +3,15 @@ import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
 
 function CourseRec(props) {
-  const { index, name, code, mIndex, completed } = props
-  const cssClasses = `p-2 m-1 course ${completed ? 'completed' : ''}    `
+  const { index, name, code, mIndex } = props
+  const cssClasses = `p-2 m-1 course`
   return (
     <Card className={cssClasses}>
       <Accordion.Toggle as={Card.Header} eventKey={`${index}`}>
         <div class="d-flex">
           <div class="p-2">{code}</div>
           <div class="p-2">{name}</div>
-          <div class="ml-auto p-2">Suitability: {mIndex}</div>
+          <div class="ml-auto p-2">Suitability: {mIndex.toFixed(0)}%</div>
         </div>
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={`${index}`}>

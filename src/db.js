@@ -65,12 +65,18 @@ export const recommendCourses = (courseList) => {
     completedCourses.push(courseList[i].completed)
     courseNames.push(courseList[i].name)
   }
+  const l = Math.max(1, completedCourses.filter(c => c).length)
   const courseRank = (courses, W) => {
     const rankedCourses = math.multiply(courses, W)
     const filtered = []
     for (let i = 0; i < courses.length; i++) {
       if (!courses[i]) {
-        filtered.push({name: courseNames[i], code:courseList[i].code, mIndex:rankedCourses[i]})
+        filtered.push({
+          name: courseNames[i],
+          code:courseList[i].code,
+          mIndex: rankedCourses[i] / l * 100,
+          // mIndex: rankedCourses[i]/l + (0.99 - rankedCourses[i]/l) * (1/4 * (Math.log(Math.max(0.019, rankedCourses[i]/l))) + 1)
+        })
       }
     }
     return filtered.sort((a, b) => b.mIndex-a.mIndex)
