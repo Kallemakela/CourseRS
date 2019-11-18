@@ -15,8 +15,10 @@ function Course(props) {
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle>{code}</Card.Subtitle>
         </div>
-        <div class="ml-auto p-2">
-          <FormCheck
+        <div class="ml-auto d-flex p-2">
+          <input
+            type='checkbox'
+            className='checkbox'
             checked={completed}
           />
         </div>

@@ -3,7 +3,7 @@
 }
 
 .course.completed {
-  background-color: #E0E0E0;
+  background-color:	#E8E8E8;
 }
 
 
@@ -20,4 +20,19 @@
 .accordion>.card {
   border: 1px solid rgba(0,0,0,.125) !important;
   border-radius: 0.25rem !important;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+	padding: 35px !important;
+	display: inline-block;
+	position: relative;
+  background: url(./img/square.svg) no-repeat center/70%;
+}
+
+.checkbox:checked {
+  background: url(./img/check.svg) no-repeat center/80%;
 }
