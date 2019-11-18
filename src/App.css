@@ -11,3 +11,13 @@
   transform: scale(1.01);
   transition-duration: 0.3s;
 }
+
+.card-header {
+  background-color: white !important;
+  border: 0 !important;
+}
+
+.accordion>.card {
+  border: 1px solid rgba(0,0,0,.125) !important;
+  border-radius: 0.25rem !important;
+}

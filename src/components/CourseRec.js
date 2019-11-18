@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion'
 
 function CourseRec(props) {
   const { index, name, code, mIndex } = props
-  const cssClasses = `p-2 m-1 course`
+  const cssClasses = `p-2 m-3 course`
   return (
     <Card className={cssClasses}>
       <Accordion.Toggle as={Card.Header} eventKey={`${index}`}>
