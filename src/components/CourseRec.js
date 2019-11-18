@@ -18,7 +18,7 @@ function CourseRec(props) {
         <Card.Body>
         <div class="d-flex">
           <div>
-            The course presents a range of central AI techniques and  provides the students with an extensive toolbox for solving problems  in practice. For applications that require high degree of adaptation,  specific techniques such as (deep) machine learning, reinforcement  learning, and graphical models are included. These methods are  instrumental for decision under uncertainty. For the purposes of  knowledge representation and reasoning, different logical  representations such as formulas and rules are covered. These representations establish the foundations for  declarative problem solving and enable the use of state-of-the-art solver technology to search for solutions. The course also encourages  the students to combine the logical and machine learning perspectives  when solving future problems.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare quam nisl, id accumsan quam consectetur sit amet. In et felis vel augue venenatis sollicitudin. Vivamus tincidunt elit quis nibh volutpat consectetur. Etiam non suscipit erat. Nulla suscipit mauris nec faucibus sodales. Aliquam tincidunt neque a leo eleifend, sed auctor nisl condimentum. Fusce justo nibh, condimentum vitae diam in, lacinia volutpat magna. Suspendisse euismod vulputate leo eget ultricies.
           </div>
         </div>
         </Card.Body>

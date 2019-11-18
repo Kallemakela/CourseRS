@@ -6,8 +6,8 @@ function Course(props) {
   const { name, code, completed, handleClick } = props
   const cssClasses = `p-2 m-1 course ${completed ? 'completed' : ''}`
   return (
-    <Card className={cssClasses}>
-      <div class='d-flex' onClick={handleClick} id={code}>
+    <Card className={cssClasses} onClick={handleClick}>
+      <div class='d-flex' id={code}>
         <div class="p-2">
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle>{code}</Card.Subtitle>
