@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,QACE,cACF,CAEA,kBACE,wBACF,CAGA,cACE,6BAAsB,CAAtB,qBAAsB,CACtB,+BAAyB,CAAzB,uBACF","file":"main.a22fd736.chunk.css","sourcesContent":[".course {\n  cursor: pointer;\n}\n\n.course.completed {\n  background-color: #E0E0E0;\n}\n\n\n.course:hover {\n  transform: scale(1.01);\n  transition-duration: 0.3s;\n}"]}
