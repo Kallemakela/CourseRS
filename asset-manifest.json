@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CourseRS/static/css/main.daa07f18.chunk.css",
-    "main.js": "/CourseRS/static/js/main.983553bf.chunk.js",
-    "main.js.map": "/CourseRS/static/js/main.983553bf.chunk.js.map",
+    "main.js": "/CourseRS/static/js/main.683dc5fb.chunk.js",
+    "main.js.map": "/CourseRS/static/js/main.683dc5fb.chunk.js.map",
     "runtime-main.js": "/CourseRS/static/js/runtime-main.9ea1e272.js",
     "runtime-main.js.map": "/CourseRS/static/js/runtime-main.9ea1e272.js.map",
     "static/css/2.0624914a.chunk.css": "/CourseRS/static/css/2.0624914a.chunk.css",
-    "static/js/2.579402ff.chunk.js": "/CourseRS/static/js/2.579402ff.chunk.js",
-    "static/js/2.579402ff.chunk.js.map": "/CourseRS/static/js/2.579402ff.chunk.js.map",
+    "static/js/2.443cd565.chunk.js": "/CourseRS/static/js/2.443cd565.chunk.js",
+    "static/js/2.443cd565.chunk.js.map": "/CourseRS/static/js/2.443cd565.chunk.js.map",
     "index.html": "/CourseRS/index.html",
-    "precache-manifest.8acbe758362415898b2c9e0a8a0064a7.js": "/CourseRS/precache-manifest.8acbe758362415898b2c9e0a8a0064a7.js",
+    "precache-manifest.b956e323de2794c3c2ec864f9af79368.js": "/CourseRS/precache-manifest.b956e323de2794c3c2ec864f9af79368.js",
     "service-worker.js": "/CourseRS/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/CourseRS/static/css/2.0624914a.chunk.css.map",
     "static/css/main.daa07f18.chunk.css.map": "/CourseRS/static/css/main.daa07f18.chunk.css.map",
@@ -18,8 +18,8 @@
   "entrypoints": [
     "static/js/runtime-main.9ea1e272.js",
     "static/css/2.0624914a.chunk.css",
-    "static/js/2.579402ff.chunk.js",
+    "static/js/2.443cd565.chunk.js",
     "static/css/main.daa07f18.chunk.css",
-    "static/js/main.983553bf.chunk.js"
+    "static/js/main.683dc5fb.chunk.js"
   ]
 }
