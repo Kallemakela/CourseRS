@@ -9,8 +9,10 @@ function CourseRec(props) {
     <Card className={cssClasses}>
       <Accordion.Toggle as={Card.Header} eventKey={`${index}`}>
         <div className="d-flex">
-          <div className="p-2">{code}</div>
-          <div className="p-2">{name}</div>
+        <div className="p-2">
+          <Card.Title>{name}</Card.Title>
+          <Card.Subtitle>{code}</Card.Subtitle>
+        </div>
           <div className="ml-auto p-2">Suitability: {mIndex.toFixed(0)}%</div>
         </div>
       </Accordion.Toggle>
