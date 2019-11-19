@@ -57,6 +57,10 @@ export const getCourses = (path) => {
   })
 }
 
+const sigmoid = (c, v, x) => {
+  return c/(c+Math.exp(-v*x))
+}
+
 export const recommendCourses = (courseList) => {
   const W = getWeights(PATH)
   const completedCourses = []
@@ -74,7 +78,8 @@ export const recommendCourses = (courseList) => {
         filtered.push({
           name: courseNames[i],
           code:courseList[i].code,
-          mIndex: rankedCourses[i] / completedLength * 100,
+          mIndex: sigmoid(0.0111, 9, rankedCourses[i] / completedLength) * 100,
+          // mIndex: rankedCourses[i] / completedLength * 100,
           // mIndex: rankedCourses[i]/l + (0.99 - rankedCourses[i]/l) * (1/4 * (Math.log(Math.max(0.019, rankedCourses[i]/l))) + 1)
         })
       }
