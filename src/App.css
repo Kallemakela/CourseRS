@@ -27,7 +27,7 @@ input[type=checkbox] {
   outline: none;
   cursor: pointer;
   background-color: white;
-	padding: 35px !important;
+	padding: 1.3rem !important;
 	display: inline-block;
 	position: relative;
   background: url(./img/square.svg) no-repeat center/70%;
