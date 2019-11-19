@@ -78,7 +78,7 @@ export const recommendCourses = (courseList) => {
         filtered.push({
           name: courseNames[i],
           code:courseList[i].code,
-          mIndex: sigmoid(0.0111, 9, rankedCourses[i] / completedLength) * 100,
+          mIndex: rankedCourses[i] === 0 ? 0 : sigmoid(0.0111, 9, rankedCourses[i] / completedLength) * 100,
           // mIndex: rankedCourses[i] / completedLength * 100,
           // mIndex: rankedCourses[i]/l + (0.99 - rankedCourses[i]/l) * (1/4 * (Math.log(Math.max(0.019, rankedCourses[i]/l))) + 1)
         })
