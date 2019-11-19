@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CourseRS/static/css/main.daa07f18.chunk.css",
+    "main.css": "/CourseRS/static/css/main.d7fbf9bd.chunk.css",
     "main.js": "/CourseRS/static/js/main.3ee2b8bd.chunk.js",
     "main.js.map": "/CourseRS/static/js/main.3ee2b8bd.chunk.js.map",
     "runtime-main.js": "/CourseRS/static/js/runtime-main.9ea1e272.js",
@@ -9,17 +9,17 @@
     "static/js/2.78c1581e.chunk.js": "/CourseRS/static/js/2.78c1581e.chunk.js",
     "static/js/2.78c1581e.chunk.js.map": "/CourseRS/static/js/2.78c1581e.chunk.js.map",
     "index.html": "/CourseRS/index.html",
-    "precache-manifest.55ad4a517b937c96a1bd8a9d54f2f8f4.js": "/CourseRS/precache-manifest.55ad4a517b937c96a1bd8a9d54f2f8f4.js",
+    "precache-manifest.c4ae15feae4f493e76e5e7d69a463d68.js": "/CourseRS/precache-manifest.c4ae15feae4f493e76e5e7d69a463d68.js",
     "service-worker.js": "/CourseRS/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/CourseRS/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.daa07f18.chunk.css.map": "/CourseRS/static/css/main.daa07f18.chunk.css.map",
+    "static/css/main.d7fbf9bd.chunk.css.map": "/CourseRS/static/css/main.d7fbf9bd.chunk.css.map",
     "static/media/App.css": "/CourseRS/static/media/square.e6c84a9d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9ea1e272.js",
     "static/css/2.0624914a.chunk.css",
     "static/js/2.78c1581e.chunk.js",
-    "static/css/main.daa07f18.chunk.css",
+    "static/css/main.d7fbf9bd.chunk.css",
     "static/js/main.3ee2b8bd.chunk.js"
   ]
 }
