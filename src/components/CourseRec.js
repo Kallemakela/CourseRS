@@ -13,7 +13,11 @@ function CourseRec(props) {
           <Card.Title>{name}</Card.Title>
           <Card.Subtitle>{code}</Card.Subtitle>
         </div>
-          <div className="ml-auto p-2">Suitability: {mIndex.toFixed(0)}%</div>
+          <div className="d-flex ml-auto p-2">
+            <div className='align-self-center'>
+            {mIndex.toFixed(0)}%
+            </div>
+          </div>
         </div>
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={`${index}`}>
