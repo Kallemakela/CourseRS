@@ -13,7 +13,7 @@ TU-C9260; Studio Course of Industrial Engineering and Management
 TU-C9270; Introduction to Networks
 TU-A1140; Leading and Understanding Oneself
 TU-A1150; Philosophy and Systems Thinking
-MUO-C0005; Design Theory and Methodology
+MUO-C3006; Basics of Service Design
 ELEC-A4010; Electrical engineering workshop
 TU-C1020; Creating Value
 AAN-C2006; Product analysis
