@@ -1,3 +1,12 @@
+.App {
+  max-width: 960px;
+  margin: auto;
+}
+
+.nav-tabs {
+  margin: 0 1rem;
+}
+
 .course {
   cursor: pointer;
 }
@@ -5,7 +14,6 @@
 .course.completed {
   background-color:	#E8E8E8;
 }
-
 
 .course:hover {
   transform: scale(1.01);
@@ -35,4 +43,10 @@ input[type=checkbox] {
 
 .checkbox:checked {
   background: url(./img/check.svg) no-repeat center/80%;
+}
+
+@media (max-width: 575px) {
+  .oodi-div {
+    margin-bottom: 0.4rem;
+  }
 }

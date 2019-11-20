@@ -1,9 +1,11 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
+import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 function CourseRec(props) {
-  const { index, name, code, mIndex } = props
+  const { index, name, code, description, oodiLink, myCoLink, mIndex } = props
   const cssClasses = `p-2 m-3 course`
   return (
     <Card className={cssClasses}>
@@ -24,7 +26,15 @@ function CourseRec(props) {
         <Card.Body>
         <div className="d-flex">
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare quam nisl, id accumsan quam consectetur sit amet. In et felis vel augue venenatis sollicitudin. Vivamus tincidunt elit quis nibh volutpat consectetur. Etiam non suscipit erat. Nulla suscipit mauris nec faucibus sodales. Aliquam tincidunt neque a leo eleifend, sed auctor nisl condimentum. Fusce justo nibh, condimentum vitae diam in, lacinia volutpat magna. Suspendisse euismod vulputate leo eget ultricies.
+            {description}
+            <Row className='mt-4'>
+              <Col sm={6} className='d-flex justify-content-center oodi-div'>
+                <a href={oodiLink} className="btn btn-dark w-100" role="button">WebOodi</a>
+              </Col>
+              <Col sm={6} className='d-flex justify-content-center'>
+                <a href={myCoLink} className="btn btn-dark w-100" role="button">MyCourses</a>
+              </Col>
+            </Row>
           </div>
         </div>
         </Card.Body>

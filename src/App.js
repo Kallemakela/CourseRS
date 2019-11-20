@@ -63,6 +63,9 @@ class App extends Component {
                     index={i}
                     key={c.code}
                     name={c.name}
+                    description={c.description}
+                    oodiLink={c.oodiLink}
+                    myCoLink={c.myCoLink}
                     code={c.code}
                     mIndex={c.mIndex}  
                   />
